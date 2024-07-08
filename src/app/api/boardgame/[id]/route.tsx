@@ -28,6 +28,6 @@ export async function GET(
 
       return Response.json({data});
   } catch (error) {
-      return {error: "Could not fetch game"};
+      return;
   }
 }

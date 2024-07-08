@@ -33,9 +33,9 @@ CardHeader.displayName = "CardHeader"
 const CardImage = React.forwardRef<
   HTMLImageElement,
   React.ImgHTMLAttributes<HTMLImageElement>
->(({ className, src, ...props }, ref) => (
+>(({ className, src = "", ...props }, ref) => (
   <div style={{ position: "relative", width: "300px", height: "200px" }}>
-    <Image alt="Boardgame Cover" src={src} sizes="100vw" fill style={{objectFit:'cover', objectPosition:'top'}} ref={ref} {...props} />
+    <Image alt="Boardgame Cover" src={src} sizes="100vw" fill style={{objectFit:'cover', objectPosition:'top'}} ref={ref} />
   </div>
 ));
 CardImage.displayName = "CardImage";

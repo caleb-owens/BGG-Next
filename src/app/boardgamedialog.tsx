@@ -13,6 +13,7 @@ import {
 import { Button } from "@/components/ui/button"
 import { useState } from "react";
 import { ScrollArea } from "@/components/ui/scroll-area"
+import { LuEye } from "react-icons/lu";
 
 type BoardGameDialogProps = {
     boardgameID: string,
@@ -36,7 +37,7 @@ const BoardGameDialog = ({ boardgameID, boardgameName }: BoardGameDialogProps) =
     return (
         <Dialog>
             <DialogTrigger asChild>
-                <Button onClick={handleClick} className="btn">More Info</Button>
+                <Button onClick={handleClick} ><LuEye className="mr-2 h-4 w-4" />Peruse</Button>
             </DialogTrigger>
             <DialogContent>
                 <DialogHeader>
